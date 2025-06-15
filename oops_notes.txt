@@ -1,0 +1,537 @@
+Object-Oriented Programming is a methodology or paradigm to design a program using classes and objects. It simplifies the software development and maintenance by providing some concepts defined below : 
+Class is a user-defined data type which defines its properties and its functions. Class is the only logical representation of the data. For example, Human being is a class. The body parts of a human being are its properties, and the actions performed by the body parts are known as functions. The class does not occupy any memory space till the time an object is instantiated.
+
+C++ Syntax (for class):
+class student{ 
+	public: int id;                       // data member int mobile; 
+	string name; 
+	int add(int x, int y) {           // member functions 
+	return x + y; } 
+	};
+
+Object is a run-time entity. It is an instance of the class. An object can represent a person, place or any other item. An object can operate on both data members and member functions.
+C++ Syntax (for object):
+student s = new student();
+Note : When an object is created using a new keyword, then space is allocated for the variable in a heap, and the starting address is stored in the stack memory. When an object is created without a new keyword, then space is not allocated in the heap memory, and the object contains the null value in the stack.
+
+Principles( or features) of object oriented programming: 
+1. Encapsulation 
+2. Data abstraction 
+3. Polymorphism 
+4. Inheritance 
+5. Dynamic binding 
+6. Message passing
+
+Encapsulation: Wrapping of data and functions together as a single unit is known as encapsulation. By default data is not accessible to outside world and they are only accessible through the functions which are wrapped in a class. prevention of data direct access by the program is called data hiding or information hiding
+
+Data abstraction : Abstraction refers to the act of representing essential features without including the back ground details or explanation. Classes use the concept of abstraction and are defined as a list of attributes such as size, weight, cost and functions to operate on these attributes. They encapsulate all essential properties of the object that are to be created. The attributes are called as data members as they hold data and the functions which operate on these data are called as member functions. Class use the concept of data abstraction so they are called abstract data type (ADT)
+
+Polymorphism: Polymorphism comes from the Greek words “poly” and “morphism”. “poly” means many and “morphism” means form i.e.. many forms. Polymorphism means the ability to take more than one form. For example, an operation have different behavior in different instances. The behavior depends upon the type of the data used in the operation.
+Types of Polymorphism
+1. Compile Time Polymorphism (Static)
+2. Runtime Polymorphism (Dynamic)
+Compile Time Polymorphism : The polymorphism which is implemented at the compile time is known as compile-time polymorphism. Example - Method Overloading
+Method Overloading : Method overloading is a technique which allows you to have more than one function with the same function name but with different functionality. Method overloading can be possible on the following basis: 
+1. The return type of the overloaded function. 
+2. The type of the parameters passed to the function. 
+3. The number of parameters passed to the function.
+
+#include<bits/stdc++.h>
+using namespace std; 
+class Add { 
+	public: 
+		int add(int a,int b){ 
+			return (a + b); 
+		} 
+		int add(int a,int b,int c){ 
+			return (a + b + c); 
+		} 
+	}; 
+int main(){ 
+Add obj; 
+int res1,res2; 
+res1 = obj.add(2,3); 
+res2 = obj.add(2,3,4); 
+cout << res1 << " " << res2 << endl; 
+return 0; } 
+Output : 5 9 
+add()is an overloaded function with a different number of parameters.
+
+Runtime Polymorphism : Runtime polymorphism is also known as dynamic polymorphism. Function overriding is an example of runtime polymorphism. Function overriding means when the child class contains the method which is already present in the parent class. Hence, the child class overrides the method of the parent class. In case of function overriding, parent and child classes both contain the same function with a different definition. The call to the function is determined at runtime is known as runtime polymorphism.
+
+#include<bits/stdc++.h> 
+using namespace std; 
+class Base_class{ 
+public: 
+	virtual void show(){ 
+		cout << "Apni Kaksha base" << endl; 
+	} 
+}; 
+class Derived_class : public Base_class{ 
+public: 
+	void show(){ 
+		cout << "Apni Kaksha derived" << endl; 
+	} 
+}; 
+int main(){ 
+Base_class* b; 
+Derived_class d; 
+b = &d; b->show(); // prints the content of show() declared in derived class 
+return 0; 
+}
+Output : Apni Kaksha derived
+
+Inheritance: Inheritance is one of the most important features of Object-Oriented Programming. The capability of a class to derive properties and characteristics from another class is called Inheritance.
+There are 5 types of Inheritance:
+1. Single Inheritance
+2. Multiple Inheritance
+3. Multilevel Inheritance
+4. Hierarchical Inheritance.
+5. Hybrid Inheritance.
+
+Single Inheritance: When a subclass(child) is inherited from a base class is called single inheritance.
+#include<bits/stdc++.h>
+using namespace std;
+class A{
+    public:
+      void funcA(){
+        cout<<"Base Class"<<endl;
+      }
+};
+// Class B is inherited from Class A
+class B : public A{
+    public:
+      void funcB(){
+        cout<<"Inherited from class A"<<endl;
+      }
+};
+int main(){
+    B obj;
+    // As Class B inherited properties of A.
+    // We can access funcA from class B object also.
+    obj.funcA();
+    obj.funcB();
+    return 0;
+}
+Output:
+Base Class
+Inherited from class A
+
+Multiple Inheritance: when one subclass is inherited from more than one base class is called multiple inheritance.
+#include<bits/stdc++.h>
+using namespace std;
+class A{
+    public:
+      void func(){
+        cout<<"Base class A"<<endl;
+      }
+};
+class B{
+    public:
+      void func(){
+        cout<<"Base class B"<<endl;
+      }
+};
+// Class C inherits both Class A and B
+class C : public A, public B{
+
+    public:
+      void func(){
+        cout<<"Inherited from class C"<<endl;
+      }
+};
+int main()
+{
+    C obj;
+    obj.A :: func();  // resolving ambiguity
+    obj.B :: func();
+    obj.func();
+    return 0;
+}
+Output:
+Base class A  
+Base class B  
+Inherited from class A and B
+
+Multilevel Inheritance: In this type of inheritance, a derived class is created from another derived class.
+#include<bits/stdc++.h>
+using namespace std;
+class A{
+     public:
+       void funcA(){
+         cout<<"Base class A"<<endl;
+       }
+};
+// Class B inherited from Class A
+class B : public A{
+     public:
+       void funcB() {
+         cout<<"Inherted from class A"<<endl;
+       }
+};
+// Class C inherited from Class B
+class C : public B{
+     public:
+       void func() {
+         cout<<"Inherited from class B"<<endl;
+       }
+};
+
+int main()
+{
+    C obj;
+    obj.funcA();
+    obj.funcB();
+    obj.func();
+    return 0;
+}
+Output:
+Base class A  
+Inherted from class A  
+Inherited from class B
+
+Hierarchical Inheritance: In this type of inheritance, more than one subclass is inherited from a single base class.
+#include<bits/stdc++.h>
+using namespace std;
+class A{
+    public:
+      void funcA(){
+        cout<<"Base class A"<<endl;
+      }
+};
+// Class B inherited from Class A
+class B : public A{
+    public:
+      void funcB(){
+        cout<<"Inherited from class A"<<endl;
+      }
+};
+// Class C also inherited from Class A
+class C : public A{
+    public:
+      void funcC(){
+        cout<<"Inherited also from class A"<<endl;
+      }
+};
+int main()
+{
+    C obj;
+    obj.funcA();
+    obj.funcC();
+    
+    B obj2;
+    obj2.funcA();
+    obj2.funcB();
+    return 0;
+}
+Output:
+Base class A  
+Inherited also from class A  
+Base class A  
+Inherited from class A
+
+Hybrid Inheritance: The inheritance in which the derivation of a class involves more than one form of any inheritance is called hybrid inheritance. Basically C++ hybrid inheritance is combination of two or more types of inheritance. It can also be called multi path inheritance.
+#include <iostream>
+using namespace std;
+class A
+{
+ 	public:
+ 	  int x;
+};
+class B : public A
+{
+ 	public:
+	  //constructor to initialize x in base class A
+ 	  B()      
+ 	  {
+ 	     x = 10;
+ 	  }
+};
+class C
+ {
+ 	public:
+ 	  int y;
+	  
+	  //constructor to initialize y
+ 	  C()   
+ 	  {
+ 	      y = 4;
+          }
+};
+//D is derived from class B and class C
+class D : public B, public C   
+{
+ 	public:
+ 	  void sum()
+ 	  {
+ 	      cout << "Sum = " << x + y;
+ 	  }
+};
+int main()
+{	
+	//object of derived class D
+        D obj1;          
+ 	obj1.sum();
+ 	return 0;
+}               	
+Output:
+Sum = 14
+
+Dynamic binding: Binding refers to linking of procedure call to the code to be executed in response to the call. Dynamic binding(or late binding) means the code associated with a given procedure call in not known until the time of call at run time.
+
+Message passing: An object oriented program consists of set of object that communicate with each other. Objects communicates with each other by sending and receiving information . A message for an object is a request for execution of a procedure and there fore invoke the function that is called for an object and generates result
+
+Constructor : Constructor is a special method which is invoked automatically at the time of object creation. It is used to initialize the data members of new objects generally. The constructor in C++ has the same name as class or structure. There can be three types of constructors in C++. 
+1. Default constructor : A constructor which has no argument is known as default constructor. It is invoked at the time of creating an object. 
+2. Parameterized constructor : Constructor which has parameters is called a parameterized constructor. It is used to provide different values to distinct objects. 
+3. Copy Constructor : A Copy constructor is an overloaded constructor used to declare and initialize an object from another object. It is of two types - default copy constructor and user defined copy constructor.
+
+Characteristics of the constructor:
+- Constructor has the same name as the class itself.
+- Constructors don’t have a return type.
+- A constructor is automatically called when an object is created.
+- It must be placed in the public section of class.
+- If we do not specify a constructor, C++ compiler generates a default constructor for object (expects no parameters and has an empty body).
+- Constructors can be overloaded.
+- Constructor cannot be declared virtual.
+
+#include <bits/stdc++.h>
+using namespace std;
+class student
+{
+     string name;
+     public:
+       int age;
+       bool gender;
+    
+    // Default Constructor
+    student(){
+      cout<<"Default Constructor"<<endl;
+    }
+    
+    // Parameterised Constructor
+    student(string s, int a, int b)  
+    {
+       name = s;
+       age = a;
+       gender = b;
+       cout <<"parameterised constructor"<<endl;
+    }
+
+    // Copy Constructor
+    student (student &p){              
+      name = p.name;
+      age = p.age;
+      gender = p.gender;
+      cout<<"copy constructer"<<endl;
+    }
+
+    void printinfo()
+    {
+        cout << "Name = ";
+        cout << name << endl;
+        cout << "Age = ";
+        cout << age << endl;
+        cout << "Gender = ";
+        cout << gender << endl;
+        cout << "\n";
+    }
+};
+
+int main()
+{   
+    // Default Constructer Call
+    student s1;
+    s1.printinfo();
+    // Parameterised Constructer Call
+    student s2("sumeet", 20, 1);
+    s2.printinfo();
+    // Copy Constructor Call
+    student s3(s2);
+    s3.printinfo();
+
+    return 0;
+}
+Output:
+Default Constructor
+Name =
+Age = 2
+Gender = 0
+
+parameterised constructor
+Name = sumeet
+Age = 20
+Gender = 1
+
+copy constructer
+Name = sumeet
+Age = 20
+Gender = 1
+
+Destructor
+- A destructor is also a special member function as a constructor. Destructor destroys the class objects created by the constructor.
+- Destructor has the same name as their class name preceded by a tiled (~) symbol.
+Characteristics of the constructor:
+- Destructor is invoked automatically by the compiler when its corresponding constructor goes out of scope and releases the memory space that is no longer required by the program.
+- Destructor neither requires any argument nor returns any value therefore it cannot be overloaded.
+- Destructor cannot be declared as static and const.
+- Destructor should be declared in the public section of the program.
+
+#include <iostream>
+using namespace std;
+int count = 0 ;
+class num{
+public:
+    num(){ // Constructor
+        count++;
+        cout << "This is the time when constructor is called for object number" << count << endl;
+    }
+
+    ~num(){ // Destructor
+        cout << "This is the time when my destructor is called for object number" << count << endl;
+        count--;
+    }
+};
+
+
+Virtual Function : A virtual function is used to replace the implementation provided by the base class. The replacement is always called whenever the object in question is actually of the derived class, even if the object is accessed by a base pointer rather than a derived pointer. 
+1. A virtual function is a member function which is present in the base class and redefined by the derived class. 
+2. When we use the same function name in both base and derived class, the function in base class is declared with a keyword virtual.
+3. When the function is made virtual, then C++ determines at run-time which function is to be called based on the type of the object pointed by the base class pointer. Thus, by making the base class pointer to point to different objects, we can execute different versions of the virtual functions.
+Key Points : 
+1. Virtual functions cannot be static. 
+2. A class may have a virtual destructor but it cannot have a virtual constructor
+#include<bits/stdc++.h>
+using namespace std;
+class base { 
+public: // virtual function (re-defined in the derived class) 
+	virtual void print(){ 
+		cout << "print base class" << endl;
+	} 
+	void show(){ 
+		cout << "show base class" << endl; 
+		} 
+}; 
+class derived : public base { 
+public: 
+	void print(){ 
+		cout << "print derived class" << endl; 
+	} 
+	void show(){ 
+		cout << "show derived class" << endl; 
+	} 
+}; 
+int main(){ 
+base* bptr; 
+derived d; 
+bptr = &d; 
+// virtual function, binded at runtime 
+bptr->print();
+// Non-virtual function, binded at compile time 
+bptr->show(); 
+} 
+Output :print derived class // (impact of virtual function) 
+show base class
+
+Pure Virtual Function: 
+1. Apure virtual function is not used for performing any task. It only serves as a placeholder. 
+2. Apure virtual function is a function declared in the base class that has no definition relative to the base class. 
+3. A class containing the pure virtual function cannot be used to declare the objects of its own, such classes are known as abstract base classes. 
+4. The main objective of the base class is to provide the traits to the derived classes and to create the base pointer used for achieving the runtime polymorphism.
+class X
+{
+	public:
+	virtual void show() = 0; // pure virtual func
+};
+
+Abstract Class:
+- Sometimes implementation of all function cannot be provided in a base class because we don’t know the implementation. Such a class is called abstract class. Example, let Shape be a base class. We cannot provide implementation of function draw() in Shape, but we know every derived class must have implementation of draw().
+- Class is Abstract, if we have atleast one pure virtual function.
+
+Namespaces in C++: 
+1. The namespace is a logical division of the code which is designed to stop the naming conflict. 
+2. The namespace defines the scope where the identifiers such as variables, class, functions are declared. 
+3. The main purpose of using namespace in C++ is to remove the ambiguity. Ambiguity occurs when a different task occurs with the same name.
+4. For example: if there are two functions with the same name such as add(). In order to prevent this ambiguity, the namespace is used. Functions are declared in different namespaces. 
+5. C++ consists of a standard namespace, i.e., std which contains inbuilt classes and functions. So, by using the statement "using namespace std;" includes the namespace "std" in our program.
+
+Friend Class & Friend Function:
+
+Friend Class: 
+- A friend class can access private and protected members of other class in which it is declared as friend.
+- It is sometimes useful to allow a particular class to access private members of other class.
+
+#include<iostream>
+using namespace std;
+class A{
+   int x;
+   public:
+    A(){
+       x=10;
+    }
+    friend class B; //friend class
+};
+class B{
+    public:
+      void display(A &t){
+	 cout<<endl<<"The value of x="<<t.x;
+      }
+};
+int main(){
+	A _a;
+	B _b;
+	_b.display(_a);
+	return 0;
+}
+Output:
+The value of x=10
+
+Friend Function:
+- Like a friend class, a friend function can be granted special access to private and protected members of a class in C++.
+- They are the non-member functions that can access and manipulate the private and protected members of the class for they are declared as friends.
+#include <iostream>
+using namespace std;
+class Base {
+private:
+    int a;
+protected:
+    int b
+public:
+    Base()
+    {
+        a = 1;
+        b = 2;
+    }
+     // friend function declaration
+    friend void func(base& obj);
+};
+// friend function definition
+void func(base& obj)
+{
+    cout << "Private Variable: " << obj.a << endl;
+    cout << "Protected Variable: " << obj.b;
+}
+// driver code
+int main()
+{
+    Base obj;
+    funcobj();
+    return 0;
+    
+}
+Output:
+Private Variable: 1  
+Protected Variable: 2
+
+Access Modifiers
+- Private – The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
+- Default – The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+- Protected – The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
+- Public – The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
+
+Delete is used to release a unit of memory, delete[] is used to release an array.
+Virtual inheritance facilitates you to create only one copy of each object even if the object appears more than one in the hierarchy. 
+Function overloading: Function overloading is defined as we can have more than one version of the same function. The versions of a function will have different signatures meaning that they have a different set of parameters.
+Operator overloading: Operator overloading is defined as the standard operator can be redefined so that it has a different meaning when applied to the instances of a class. 
+Overloading is static Binding, whereas Overriding is dynamic Binding. Overloading is nothing but the same method with different arguments, and it may or may not return the same value in the same class itself. 
+Overriding is the same method name with the same arguments and return types associated with the class and its child class.

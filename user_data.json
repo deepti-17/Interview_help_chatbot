@@ -1,0 +1,42 @@
+{
+  "default_user": {
+    "completed_topics": [],
+    "quiz_scores": {
+      "dbms": 0,
+      "os": 0,
+      "cn": 0
+    }
+  },
+  "dee": {
+    "os": {
+      "status": "completed",
+      "score": 1,
+      "attempts": 2
+    },
+    "dbms": {
+      "score": 2,
+      "attempts": 3,
+      "completed": false
+    },
+    "cn": {
+      "score": 2,
+      "attempts": 3
+    },
+    "oops": {
+      "score": 2,
+      "attempts": 3
+    }
+  },
+  "1": {
+    "oops": {
+      "score": 1,
+      "attempts": 1,
+      "completed": false
+    },
+    "dbms": {
+      "score": 0,
+      "attempts": 1,
+      "completed": false
+    }
+  }
+}

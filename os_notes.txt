@@ -1,0 +1,135 @@
+Operating System
+The Operating System is system software that acts as an intermediary between the user and the computer. It manages all the programs and processes that run inside the computer.
+
+Types of Operating System
+Batch Operating System - In this, Jobs are executed in batches. Similar jobs are grouped and are executed one by one.
+Multiprogramming Operating System - Multiprogramming utilizes the CPU more efficiently. The OS assigns a process to the CPU and when it waits for I/O the CPU assigns another process in the queue to the CPU. The main aim is not to keep the CPU idle.
+Multitasking Operating System - In multitasking, each job or process is given some time to execute and the operating system switches the jobs after a certain interval of time. This is also known as Time Sharing OS.
+Real-Time Operating System - It serves real-time applications and processes which have very strict time constraints.
+Distributed Operating System - It serves multiple real-time applications which require multiple CPUs. Various computers communicate with each other through a network.
+Thread
+A thread is a component of a process. It helps a process in doing multiple tasks at a time. A process may contain multiple threads.
+
+There are two types of threads.
+
+User threads - It is implemented by the user.
+Kernel threads - It is implemented by the Operating System.
+Process
+A process is any program in execution. It contains more than one thread which helps it in doing multiple tasks at a time.
+
+Difference between Process and Thread
+Process: 	
+It is a program in execution.
+Processes don't share common memory resources.
+It consumes more space.
+Context switching is time-consuming.
+It has its own memory space.
+
+Thread:
+It is a component of a process.
+It can share resources such as memory.
+It consumes less space.
+Context switching is easier and less time-consuming.
+It used the memory space of the process it belongs to.
+Process Scheduling
+It is the scheduling of processes for their execution. It helps in the efficient utilization of the CPU.
+
+Need of Process Scheduling
+A process requires CPU time and I/O time. When a process is doing I/O the CPU becomes idle. To efficiently utilize the CPU, when a process is doing I/O the operating system assigns another process to the CPU. This helps in the simultaneous execution of more than one process. Multiprogramming is only possible with process scheduling.
+
+Important Terms Related to Process Scheduling
+Arrival Time - It is the time of arrival of the process in the ready queue.
+Completion Time - It is the time of completion of the execution of a process.
+Burst Time - It is the time required by a process for execution.
+Turn Around Time  - It is the difference between the completion time and the arrival time.
+Waiting Time - It is the time for which the process needs to wait in the queue. It is equal to the difference between Turn Around Time and Burst Time.
+Process Scheduling Algorithms
+First Come First Serve (FCFS) - It schedules the Process according to the arrival time. The process which arrives first is scheduled first. It is the simplest scheduling algorithm.
+Shortest Job First (SJF) - The Process which has the shortest execution time or Burst time is scheduled first in this algorithm.
+Shortest Remaining Time First - The only difference between SJF and this is preemption happens in this. The processes are scheduled according to the shortest remaining time for execution.
+Round Robin Scheduling - In Round Robin each process is cyclically assigned a fixed time. Each process executes for a certain time and waits for its turn again.
+Priority Scheduling - In Priority Scheduling, processes are scheduled according to their priority. The process which has higher priority is scheduled first and so on.
+Multilevel Queue Scheduling - There are multiple queues in this algorithm according to the priority of the processes. The processes with higher priority are placed in one queue and lower ones in another similarly. The processes with lower priority are executed only after the execution of all higher priority processes.
+Multilevel Queue with Feedback - This also uses the multiple queues concept but the processes may be moved from lower priority queue to higher priority queue according to their feedback. If a process needs lower CPU time, it can be moved to a higher priority queue and vice versa.
+Race Around Condition
+This condition occurs when more than one process tries to access the same data at the same time and tries to manipulate it. The outcome of the execution depends on the order they access the data.
+
+Semaphore
+A semaphore is a variable that is used to prevent the simultaneous access of common resources by one or more threads in concurrent systems.
+
+Deadlock
+It is an unwanted situation in which processes block each other by holding one resource and waiting for another resource that is held by some other process.
+
+Note - A deadlock can be handled by preventing it, detecting it, or simply ignoring it.
+
+Necessary Condition for Deadlock
+Mutual Exclusion - At least two resources must be held in a non-sharable mode i.e,  it can be used by only one process at a time.
+Hold and Wait - A process is holding one resource and waiting for some resource held by another process.
+No preemption - A resource can't be taken from a process involuntarily.
+Circular Wait - A set of processes are holding one resource and waiting for another resource held by another process leading to circular wait.
+Banker's Algorithm
+The Banker's Algorithm is also known as the deadlock avoidance algorithm. It does the safe state check in which it checks if an instance of a resource can be allocated to a process or not. It does so to avoid the deadlock.
+
+Memory Management
+Memory Management is a technique to efficiently utilize the fixed amount of memory to allocate it to various processes for their execution. It is needed to reduce memory wastage and fragmentation issues and to protect the processes from each other which are present in the main memory together.
+
+Contiguous Memory Allocation
+Contiguous Memory Allocation is a technique in which a process is allocated a single contiguous block or section of the memory according to its need.
+
+Memory Partition Technique
+Fixed Size Partition - In the Fixed Size Partition technique, the memory is divided into equal fixed-sized partitions.
+Dynamic Size Partition - The memory is divided dynamically according to the process size. It uses memory more efficiently.
+Types of Memory Allocation
+First Fit - In this technique, the process is allocated to the first hole which has a size greater than or equal to the process size.
+Next Fit - This is similar to the First Fit. The only difference is it keeps a pointer on the last allocated block and begins searching from there to allocate the process to a hole.
+Best Fit - In Best Fit, every block is checked for every process and the process is allocated to that hole that has the least leftover space after the process allocation.
+Worst Fit - This is opposite to the Best Fit and the process is allocated to that hole that has the maximum leftover space after the process allocation.
+Fragmentation
+When there is vacant memory space available but it is too small to fit a process that is called Fragmentation. Fragmentation is of two types. It is of two types.
+
+Internal Fragmentation
+External Fragmentation
+Paging
+In paging, processes are divided into equal parts called pages, and main memory is also divided into equal parts and each part is called a frame. Paging helps in allocating memory to a process at different locations in the main memory. It reduces memory wastage and removes external fragmentation.
+
+Segmentation
+In Segmentation, a process is divided into multiple segments. The size of each segment is not necessarily the same which is different from paging. It gives the user's view of a process and also increases the efficiency of the system as compared to Paging.
+
+Page Replacement Algorithms
+Page Replacement Algorithm is used when a page fault occurs. Page Fault means the page referenced by the CPU is not present in the main memory. Page Replacement Algorithm is used to decide which page will be replaced to allocate memory to the current referenced page.
+
+First In First Out (FIFO) -This algorithm is similar to the operations of the queue. All the pages are stored in the queue in the order they are allocated frames in the main memory. The one which is allocated first stays in the front of the queue. The one which is allocated the memory first is replaced first. The one which is at the front of the queue is removed at the time of replacement.
+Optimal Page Replacement - In this algorithm, the page which would be used after the longest interval is replaced. In other words, the page which is farthest to come in the upcoming sequence is replaced.
+Least Recently Used - This algorithm works on previous data. The page which is used the earliest is replaced or which appears the earliest in the sequence is replaced.
+Belady's Anomaly 
+It says that on increasing the number of page frames, the number of page faults increases in the First In First Out page replacement algorithm.
+
+File System
+The File System is a method or data structure that helps in storing the data or files in the system so that it can be fetched easily when required.
+
+File Directories
+The File Directory is itself a file that contains information about the files. The File directory is the collection of files. It contains a lot of information about the files like name, type, location, protection, etc.
+
+Types of File Directories
+Single Level Directory
+Two Level Directory
+Tree-Structured Directory
+Allocation of Files
+Contiguous Allocation - In the Contiguous Allocation method, the blocks of files are stored in a contiguous manner in the disk.
+Linked List Allocation - The first block stores the pointer to the second block and the second block to the third and similarly thereafter.
+Indexed File Allocation - In this method, the addresses of all blocks of a file are stored in a separate block. All the blocks of a file are accessed using the data stored in the index block.
+Disk Scheduling
+It is the scheduling of the I/O requests made by a process for the disk.
+
+Important Terms related to Disk Scheduling Algorithms
+Seek Time - It is the time taken by the disk arm to locate the desired track.
+Rotational Latency - The time taken by a desired sector of the disk to rotate itself to the position where it can access the Read/Write heads is called Rotational Latency.
+Transfer Time - It is the time taken to transfer the data requested by the processes.
+Disk Access Time - Disk Access time is the sum of the Seek Time, Rotational Latency, and Transfer Time.
+Disk Scheduling Algorithms
+First Come First Serve (FCFS) - In this algorithm, the requests are served in the order they come. Those who come first are served first. This is the simplest disk scheduling algorithm.
+Shortest Seek Time First (SSTF) - In this algorithm, the shortest seek time is checked from the current position and those requests which have the shortest seek time is served first. In simple words, the closest request from the disk arm is served first.
+SCAN - The disk arm moves in a particular direction till the end and serves all the requests in its path, then it returns to the opposite direction and moves till the last request is found in that direction and serves all of them.
+LOOK - The disk arm moves in a particular direction till the last request is found in that direction and serves all of them found in the path, and then reverses its direction and serves the requests found in the path again up to the last request found. The only difference between SCAN and LOOK is, it doesn't go to the end it only moves up to which the request is found.
+C-SCAN - This algorithm is the same as the SCAN algorithm. The only difference between SCAN and C-SCAN is, it moves in a particular direction till the last and serves the requests in its path. Then, it returns in the opposite direction till the end and doesn't serve the request while returning. Then, again reverses the direction and serves the requests found in the path.
+C-LOOK - This algorithm is also the same as the LOOK algorithm. The only difference between LOOK and C-LOOK is, it moves in a particular direction till the last request is found and serves the requests in its path. Then, it returns in the opposite direction till the last request is found in that direction and doesn't serve the request while returning. Then, again reverses the direction and serves the requests found in the path.

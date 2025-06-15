@@ -1,0 +1,92 @@
+{
+  "intents": [
+    {
+      "tag": "tips",
+      "patterns": [
+        "How can I prepare for interviews?",
+        "Give me some interview tips",
+        "What are the best DSA tips?"
+      ],
+      "responses": [
+        "Be confident, know your resume, and practice DSA daily."
+      ]
+    },
+    {
+      "tag": "oops",
+      "patterns": [
+        "What is OOPs?",
+        "Explain polymorphism",
+        "Tell me about inheritance"
+      ],
+      "responses": [
+        "OOPs involves concepts like classes, inheritance, and polymorphism."
+      ]
+    },
+    {
+      "tag": "dbms",
+      "patterns": [
+        "What is normalization?",
+        "Explain SQL joins",
+        "Tell me about ER diagrams"
+      ],
+      "responses": [
+        "DBMS includes SQL, ER models, normalization, and indexing."
+      ]
+    },
+    {
+      "tag": "cn",
+      "patterns": [
+        "Explain OSI model",
+        "What is TCP/IP?",
+        "Tell me about DNS"
+      ],
+      "responses": [
+        "Computer Networks includes protocols, OSI model, and routing."
+      ]
+    },
+    {
+      "tag": "os",
+      "patterns": [
+        "What is a process?",
+        "Explain deadlock",
+        "How does scheduling work in OS?"
+      ],
+      "responses": [
+        "OS covers processes, threads, scheduling, and memory management."
+      ]
+    },
+    {
+      "tag": "quiz",
+      "patterns": [
+        "Give me a quiz",
+        "Start mock test",
+        "I want to practice MCQs"
+      ],
+      "responses": [
+        "Let me fetch some MCQs for you... (Coming Soon!)"
+      ]
+    },
+    {
+      "tag": "explain",
+      "patterns": [
+        "Explain quick sort",
+        "Can you explain OSI layers?",
+        "I want a topic explanation"
+      ],
+      "responses": [
+        "Sure! Tell me the topic you want explained."
+      ]
+    },
+    {
+      "tag": "track",
+      "patterns": [
+        "Track my progress",
+        "What have I completed?",
+        "Show my learning history"
+      ],
+      "responses": [
+        "Tracking progress... Please tell me what you've completed."
+      ]
+    }
+  ]
+}

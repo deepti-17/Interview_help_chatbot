@@ -1,0 +1,81 @@
+text,label
+What are some good interview tips?,tips
+How should I prepare for interviews?,tips
+Can you give me interview preparation advice?,tips
+Share some important interview tips.,tips
+Tips for freshers attending interviews?,tips
+Any tips for cracking technical interviews?,tips
+Tell me how to face interviews confidently.,tips
+What should I keep in mind during interviews?,tips
+Suggest some resume and interview tips.,tips
+How to answer HR interview questions?,tips
+Explain polymorphism in OOPs.,oops
+What is inheritance in object-oriented programming?,oops
+Define encapsulation.,oops
+Explain the concept of abstraction.,oops
+Difference between class and object?,oops
+What is method overloading?,oops
+Give an example of inheritance.,oops
+Why use OOPs in programming?,oops
+Tell me about constructors in OOPs.,oops
+How is interface different from abstract class?,oops
+What is normalization in DBMS?,dbms
+Explain ER diagrams.,dbms
+What are primary and foreign keys?,dbms
+Define functional dependency.,dbms
+Explain different types of joins in SQL.,dbms
+What is the difference between SQL and NoSQL?,dbms
+Define ACID properties.,dbms
+What is a transaction in a database?,dbms
+Explain indexing in databases.,dbms
+What is a view in SQL?,dbms
+What is TCP/IP model?,cn
+Explain OSI layers.,cn
+What is DNS used for?,cn
+What is an IP address?,cn
+How does HTTP work?,cn
+What is the difference between TCP and UDP?,cn
+Define subnetting.,cn
+Explain how routers work.,cn
+What is a MAC address?,cn
+Explain ARP protocol.,cn
+What is a process in OS?,os
+What is a thread in operating system?,os
+Explain process scheduling.,os
+What is deadlock?,os
+How does memory management work in OS?,os
+Explain paging and segmentation.,os
+What is context switching?,os
+Describe types of operating systems.,os
+What is process synchronization?,os
+Difference between multiprocessing and multithreading?,os
+Give me a quiz on DBMS.,quiz
+Start a quiz on Computer Networks.,quiz
+I want to take a quiz on OS.,quiz
+Give me some MCQs.,quiz
+Let's do a quiz.,quiz
+Start a technical quiz.,quiz
+Ask me some questions from DBMS.,quiz
+I want to practice MCQs.,quiz
+Give me multiple choice questions.,quiz
+Let's begin the quiz round.,quiz
+Explain TCP protocol.,explain
+Can you explain threading?,explain
+Explain deadlock with example.,explain
+Tell me about SQL injection.,explain
+How does routing work?,explain
+Explain paging in operating system.,explain
+Can you explain subnetting?,explain
+Describe functional dependency.,explain
+Explain OSI Model.,explain
+Explain normalization in detail.,explain
+I completed OS what's next?,track
+I’m done with DBMS suggest the next topic.,track
+What should I study after OOPs?,track
+Track my quiz progress.,track
+Mark OS as completed.,track
+What’s left in CN?,track
+I want to see my completed topics.,track
+Show my progress report.,track
+How much syllabus is done?,track
+Which topics are still pending?,track

@@ -1,0 +1,583 @@
+{
+  "dbms": [
+    {
+      "question": "What is the purpose of normalization in a database?",
+      "options": [
+        "To remove duplicate data",
+        "To increase redundancy",
+        "To make queries faster",
+        "To remove keys from tables"
+      ],
+      "answer": "To remove duplicate data"
+    },
+    {
+      "question": "Which of the following is a valid ACID property in DBMS?",
+      "options": [
+        "Accuracy",
+        "Consistency",
+        "Durability",
+        "Both Consistency and Durability"
+      ],
+      "answer": "Both Consistency and Durability"
+    },
+    {
+      "question": "What does SQL stand for?",
+      "options": [
+        "Structured Query List",
+        "Structured Question Language",
+        "Simple Query Language",
+        "Structured Query Language"
+      ],
+      "answer": "Structured Query Language"
+    },
+    {
+      "question": "What is a foreign key?",
+      "options": [
+        "A primary key in another table",
+        "A duplicate key",
+        "A key with unique values",
+        "A temporary key"
+      ],
+      "answer": "A primary key in another table"
+    },
+    {
+        "question": "Which of the following is a valid property of a primary key?",
+        "options": [
+            "Can be NULL", 
+            "Can have duplicates", 
+            "Must be unique and NOT NULL", 
+            "Can be composite only"
+        ],
+        "answer": "Must be unique and NOT NULL"
+    },
+    {
+        "question": "Which normal form removes transitive dependency?",
+        "options": [
+            "1NF", 
+            "2NF", 
+            "3NF", 
+            "BCNF"
+        ],
+        "answer": "3NF"
+    },
+    {
+        "question": "Which SQL clause is used to remove duplicate rows?",
+        "options": [
+            "DISTINCT", 
+            "UNIQUE", 
+            "DELETE", 
+            "GROUP BY"
+        ],
+        "answer": "DISTINCT"
+    },
+    {
+        "question": "Which of the following is a DDL command?",
+        "options": [
+            "SELECT", 
+            "INSERT", 
+            "DELETE", 
+            "CREATE"
+        ],
+        "answer": "CREATE"
+    },
+    {
+        "question": "Which key uniquely identifies a row in a relation and is not a primary key?",
+        "options": [
+            "Foreign key", 
+            "Candidate key", 
+            "Super key", 
+            "Alternate key"
+        ],
+        "answer": "Alternate key"
+    },
+    {
+        "question": "Which of the following is not a valid constraint in SQL?",
+        "options": [
+            "PRIMARY KEY", 
+            "FOREIGN KEY", 
+            "UNIQUE", 
+            "MODIFY"
+        ],
+        "answer": "MODIFY"
+    },
+    {
+        "question": "What is the purpose of the ROLLBACK command in SQL?",
+        "options": [
+            "Saves the current transaction", 
+            "Reverses the changes of current transaction", 
+            "Deletes the table", 
+            "Commits changes permanently"
+        ],
+        "answer": "Reverses the changes of current transaction"
+    },
+    {
+        "question": "Which operation combines tuples from two relations based on a common attribute?",
+        "options": [
+            "Union", 
+            "Intersection", 
+            "Join", 
+            "Cartesian product"
+        ],
+        "answer": "Join"
+    },
+    {
+        "question": "In ER diagrams, what does a diamond symbol represent?",
+        "options": [
+            "Entity", 
+            "Attribute", 
+            "Relationship", 
+            "Key"
+        ],
+        "answer": "Relationship"
+    },
+    {
+        "question": "Which of these is used to uniquely identify a tuple in a relation?",
+        "options": [
+            "Attribute", 
+            "Tuple", 
+            "Primary Key", 
+            "Foreign Key"
+        ],
+        "answer": "Primary Key"
+    }
+  ],
+
+  "os": [
+    {
+      "question": "Which of the following is a function of the OS?",
+      "options": [
+        "Memory Management",
+        "Compiling Code",
+        "Creating Database",
+        "Designing Webpages"
+      ],
+      "answer": "Memory Management"
+    },
+    {
+      "question": "Which scheduling algorithm gives the minimum average waiting time?",
+      "options": [
+        "FCFS",
+        "SJF",
+        "Round Robin",
+        "Priority Scheduling"
+      ],
+      "answer": "SJF"
+    },
+    {
+      "question": "What is a deadlock?",
+      "options": [
+        "An infinite loop",
+        "A process waiting for I/O",
+        "A set of processes waiting on each other indefinitely",
+        "A terminated process"
+      ],
+      "answer": "A set of processes waiting on each other indefinitely"
+    },
+    {
+      "question": "What is the purpose of a semaphore?",
+      "options": [
+        "To store data",
+        "To manage memory",
+        "To prevent race conditions",
+        "To schedule processes"
+      ],
+      "answer": "To prevent race conditions"
+    },
+    {
+        "question": "Which of the following is NOT a type of OS?",
+        "options": [
+        "Batch OS",
+        "Time-Sharing OS",
+        "Distributed OS",
+        "Compiler OS"
+        ],
+        "answer": "Compiler OS"
+    },
+    {
+        "question": "What does 'thrashing' refer to in OS?",
+        "options": [
+        "A process stuck in an infinite loop",
+        "A program crashing repeatedly",
+        "Excessive swapping of pages in and out of memory",
+        "A deadlocked system"
+        ],
+        "answer": "Excessive swapping of pages in and out of memory"
+    },
+    {
+        "question": "Which of the following is used to handle deadlock?",
+        "options": [
+        "Banker’s Algorithm",
+        "Round Robin",
+        "Paging",
+        "Segmentation"
+        ],
+        "answer": "Banker’s Algorithm"
+    },
+    {
+        "question": "In paging, a logical address is divided into?",
+        "options": [
+        "Frame number and offset",
+        "Page number and offset",
+        "Segment and frame",
+        "Base and limit"
+        ],
+        "answer": "Page number and offset"
+    },
+    {
+        "question": "Which component is responsible for context switching?",
+        "options": [
+        "Memory Manager",
+        "Scheduler",
+        "Dispatcher",
+        "Interpreter"
+        ],
+        "answer": "Dispatcher"
+    },
+    {
+        "question": "Which of these is a non-preemptive scheduling algorithm?",
+        "options": [
+        "Round Robin",
+        "SJF (Preemptive)",
+        "Priority Scheduling (Preemptive)",
+        "FCFS"
+        ],
+        "answer": "FCFS"
+    },
+    {
+        "question": "Which condition is necessary for deadlock to occur?",
+        "options": [
+        "Mutual Exclusion",
+        "Preemption",
+        "FIFO Scheduling",
+        "Round Robin Execution"
+        ],
+        "answer": "Mutual Exclusion"
+    },
+    {
+        "question": "Which memory management technique suffers from external fragmentation?",
+        "options": [
+        "Paging",
+        "Segmentation",
+        "Demand Paging",
+        "Swapping"
+        ],
+        "answer": "Segmentation"
+    },
+    {
+        "question": "What is the role of the kernel in an operating system?",
+        "options": [
+        "Manage user input",
+        "Run antivirus scans",
+        "Interface between hardware and software",
+        "Render graphics"
+        ],
+        "answer": "Interface between hardware and software"
+    },
+    {
+        "question": "Which of the following is true about virtual memory?",
+        "options": [
+        "It is located on the CPU",
+        "It increases RAM size",
+        "It uses disk storage to simulate extra RAM",
+        "It only works on mobile devices"
+        ],
+        "answer": "It uses disk storage to simulate extra RAM"
+    }
+  ],
+
+  "cn": [
+    {
+      "question": "Which layer of the OSI model handles routing?",
+      "options": [
+        "Transport layer",
+        "Network layer",
+        "Data Link layer",
+        "Physical layer"
+      ],
+      "answer": "Network layer"
+    },
+    {
+      "question": "What does DNS stand for?",
+      "options": [
+        "Dynamic Name System",
+        "Domain Name System",
+        "Data Network Service",
+        "Domain Network Service"
+      ],
+      "answer": "Domain Name System"
+    },
+    {
+      "question": "What protocol is used to send email?",
+      "options": [
+        "HTTP",
+        "FTP",
+        "SMTP",
+        "SNMP"
+      ],
+      "answer": "SMTP"
+    },
+    {
+      "question": "Which device connects different networks?",
+      "options": [
+        "Switch",
+        "Hub",
+        "Router",
+        "Repeater"
+      ],
+      "answer": "Router"
+    },
+    {
+        "question": "What does the OSI model stand for?",
+        "options": [
+        "Open Source Interconnection",
+        "Operating System Interface",
+        "Open Systems Interconnection",
+        "Open Standard Interface"
+        ],
+        "answer": "Open Systems Interconnection"
+    },
+    {
+        "question": "Which layer of the OSI model is responsible for end-to-end communication?",
+        "options": [
+        "Network Layer",
+        "Transport Layer",
+        "Data Link Layer",
+        "Session Layer"
+        ],
+        "answer": "Transport Layer"
+    },
+    {
+        "question": "Which protocol is connection-oriented?",
+        "options": [
+        "UDP",
+        "IP",
+        "TCP",
+        "HTTP"
+        ],
+        "answer": "TCP"
+    },
+    {
+        "question": "Which device operates at the data link layer?",
+        "options": [
+        "Router",
+        "Switch",
+        "Hub",
+        "Modem"
+        ],
+        "answer": "Switch"
+    },
+    {
+        "question": "Which IP class provides the maximum number of host addresses?",
+        "options": [
+        "Class A",
+        "Class B",
+        "Class C",
+        "Class D"
+        ],
+        "answer": "Class A"
+    },
+    {
+        "question": "What is the size of an IPv4 address?",
+        "options": [
+        "32 bits",
+        "64 bits",
+        "128 bits",
+        "16 bits"
+        ],
+        "answer": "32 bits"
+    },
+    {
+        "question": "Which protocol is used to translate domain names to IP addresses?",
+        "options": [
+        "FTP",
+        "TCP",
+        "DNS",
+        "DHCP"
+        ],
+        "answer": "DNS"
+    },
+    {
+        "question": "What does HTTP stand for?",
+        "options": [
+        "Hyper Transfer Text Protocol",
+        "Hyper Text Transfer Protocol",
+        "High Transfer Text Protocol",
+        "Hyper Text Transmission Process"
+        ],
+        "answer": "Hyper Text Transfer Protocol"
+    },
+    {
+        "question": "Which layer of the OSI model deals with MAC addresses?",
+        "options": [
+        "Network Layer",
+        "Data Link Layer",
+        "Transport Layer",
+        "Application Layer"
+        ],
+        "answer": "Data Link Layer"
+    },
+    {
+        "question": "Which protocol is used for sending emails?",
+        "options": [
+        "SMTP",
+        "FTP",
+        "HTTP",
+        "SNMP"
+        ],
+        "answer": "SMTP"
+    }
+  ],
+
+  "oops": [
+    {
+        "question": "What does OOP stand for?",
+        "options": [
+        "Object-Oriented Programming",
+        "Operational Object Programming",
+        "Organized Open Programming",
+        "Object Operating Principle"
+        ],
+        "answer": "Object-Oriented Programming"
+    },
+    {
+        "question": "Which of the following is not a pillar of OOP?",
+        "options": [
+        "Encapsulation",
+        "Polymorphism",
+        "Abstraction",
+        "Compilation"
+        ],
+        "answer": "Compilation"
+    },
+    {
+        "question": "What is encapsulation?",
+        "options": [
+        "Hiding implementation details",
+        "Inheritance of classes",
+        "Extending base classes",
+        "Overriding functions"
+        ],
+        "answer": "Hiding implementation details"
+    },
+    {
+        "question": "Which concept allows using the same function name with different arguments?",
+        "options": [
+        "Abstraction",
+        "Encapsulation",
+        "Polymorphism",
+        "Inheritance"
+        ],
+        "answer": "Polymorphism"
+    },
+    {
+        "question": "Which keyword is used to create a class in C++?",
+        "options": [
+        "def",
+        "function",
+        "class",
+        "struct"
+        ],
+        "answer": "class"
+    },
+    {
+        "question": "What is inheritance in OOP?",
+        "options": [
+        "Creating private methods",
+        "Creating multiple classes",
+        "Deriving a class from another class",
+        "Hiding class data"
+        ],
+        "answer": "Deriving a class from another class"
+    },
+    {
+        "question": "Which access specifier makes a class member accessible only within the class?",
+        "options": [
+        "private",
+        "public",
+        "protected",
+        "internal"
+        ],
+        "answer": "private"
+    },
+    {
+        "question": "What is the output of a constructor?",
+        "options": [
+        "Void",
+        "Returns a value",
+        "Nothing",
+        "It initializes the object"
+        ],
+        "answer": "It initializes the object"
+    },
+    {
+        "question": "Which of the following best defines abstraction?",
+        "options": [
+        "Hiding internal details and showing functionality",
+        "Extending a class",
+        "Overriding methods",
+        "Creating many objects"
+        ],
+        "answer": "Hiding internal details and showing functionality"
+    },
+    {
+        "question": "What is function overriding?",
+        "options": [
+        "Writing two functions with the same name and parameters",
+        "Writing a new implementation of a base class method in a derived class",
+        "Hiding a method",
+        "Deleting a function"
+        ],
+        "answer": "Writing a new implementation of a base class method in a derived class"
+    },
+    {
+        "question": "Which OOP concept is achieved using interfaces in Java?",
+        "options": [
+        "Polymorphism",
+        "Inheritance",
+        "Encapsulation",
+        "Abstraction"
+        ],
+        "answer": "Abstraction"
+    },
+    {
+        "question": "What is a class?",
+        "options": [
+        "An instance of an object",
+        "A blueprint for creating objects",
+        "A memory location",
+        "A function"
+        ],
+        "answer": "A blueprint for creating objects"
+    },
+    {
+        "question": "Which of the following supports multiple inheritance?",
+        "options": [
+        "Java classes",
+        "C++ classes",
+        "Python interfaces",
+        "JavaScript classes"
+        ],
+        "answer": "C++ classes"
+    },
+    {
+        "question": "Which of these is a correct example of polymorphism?",
+        "options": [
+        "Constructor overloading",
+        "Creating a class",
+        "Using if-else conditions",
+        "None of the above"
+        ],
+        "answer": "Constructor overloading"
+    },
+    {
+        "question": "What is the default access specifier for class members in C++?",
+        "options": [
+        "public",
+        "private",
+        "protected",
+        "global"
+        ],
+        "answer": "private"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+#### What are Databases?
+A database is an organized collection of data stored and accessed electronically from a computer system in computing.
+
+#### What is DBMS?
+The database management system (DBMS) is the software that interacts with end-users, applications, and the database itself to capture and analyze the data.  
+The DBMS software additionally encompasses the core facilities provided to administer the database.
+
+#### Database Languages
+- **Data control language (DCL)**: It controls access to data. It consists of commands GRANT, REVOKE.
+- **Data definition language (DDL)**: It is used to define database schema. It consists of SQL commands CREATE, ALTER, DROP, etc.
+- **Data manipulation language (DML)**: It is used to perform tasks like inserting, deleting, updating data occurrences. It consists of commands INSERT, UPDATE, DELETE, etc.
+- **Data query language (DQL)**: It allows searching for information and computing derived information. It consists of commands SELECT.
+
+#### Relational Databases
+A relational database is a database based on the relational model of data.
+The relational model organizes data into one or more tables (or "relations") of columns and rows, with a unique key identifying each row. Rows are also called records or tuples. Columns are also called attributes.
+
+#### Relational Algebra
+Relational Algebra is considered a procedural query language. It has a group of operators that work on relations or tables. It takes relations as an input and also gives relation as an output.  
+
+##### Operators in Relational Algebra
+- Projection (π) - It is used to retrieve data from a column of a table.
+- Selection (σ) - It is used to select the required tuple/row from the table.
+- Cross Product (X) - The cross product of two relations with `X` and `Y` rows will have `X*Y` rows.
+- Union (U) - It eliminates the duplicate tuples and selects the tuples which have appeared at least once in any table.
+- Set difference (-) - If there are two tables A and B then A-B means all the tuples which are present in  A but not in B.
+- Rename (ρ) - It is used to rename the attributes of a relation. ρ(A/B)(R) will rename the attribute ‘B’ of relation R by ‘A’.
+- Natural Join (⋈) - If there are two relations A and B then Natural join between A and B will show the set of all the tuples in which they have the equal common attribute.
+- Conditional Join - The only difference between Natural Join and Conditional Join is in natural join the attributes must be equal by default but in conditional join, we can specify the conditions like greater than, less than, etc.
+- Intersection (⋂) - If there are two relations A and B then the output of A ⋂ B will be the set of tuples that are common in both A and B.
+
+#### Keys in DBMS
+- Candidate Key - It is the minimal set of attributes that can identify a tuple uniquely. A candidate key must have a unique value in each row. A candidate key can't have a NULL value in any row.
+- Super Key - Any number of attributes added to a candidate key will be a super key.
+- Primary Key - A Primary Key is a set of attributes that can uniquely identify the tuples. It is one of the candidate keys which is most suitable to identify a tuple. The value of the primary key in any row can't be null. There can be only one primary key in a table.
+- Alternate Key - All other candidate keys except the primary key are called Alternate Key.
+- Foreign Key - It is the set of attributes that establishes a relationship between two tables.
+- Unique Key - It also identifies a tuple of a relation uniquely. A table can have more than one unique key.
+
+#### Normalization
+Database Normalization is a technique that is used to reduce redundancy or duplicate data from the database and store the data logically. The main aim of Normalization is any of the operations like insertion, deletion, and the update of the data does not cause any anomalies.
+
+##### Normal Forms
+- First Normal Form (1NF) - A relation is considered to be in the first normal form if it doesn’t contain any multivalued attribute.
+- Second Normal Form (2NF) - For a relation to be in 2NF, no non-prime attribute should be functionally dependent on any partial candidate key or any proper subset of the candidate key. There should be no partial dependency. It must be in 1NF.
+- Third Normal Form (3NF) - For a table to be in 3NF, there should be no transitive dependency for non-prime attributes and it must be in 2NF. Transitive dependency means indirect dependency like X→Y (Y is dependent on X) and Y→Z so X→Z.
+- Boyce-Codd Normal Form (BCNF) - For a relation to be in BCNF it must be in 3NF. For every non-trivial functional dependency X→Y, X is a super key and for every trivial functional dependency X→Y, Y is a subset of X (Y⊆X). This form is stronger than 3NF.
+
+#### Denormalization
+Denormalization is a technique used to improve the performance of a normalized database by adding some redundant data.
+
+#### Database Joins
+Joins are used in relational databases to combine data from multiple tables based on a common column between them. A foreign key may be used to reference a row in another table and join can be done based on those columns.
+
+- Cross Join - CROSS JOIN returns the cartesian product of rows from the tables in the join. It combines each row of the first table with each row of the second table.
+- INNER JOIN - The INNER JOIN produces the output by combining those rows which have matching column values. Those rows from the two tables are combined and selected in the joined table which has the same value for the common column.
+- LEFT OUTER JOIN - The LEFT OUTER JOIN which is also called LEFT JOIN returns all the rows from the left table ‘A’ and the matching rows from the right table ‘B’ in the join.
+- RIGHT OUTER JOIN - The RIGHT OUTER JOIN which is also called RIGHT JOIN returns all the rows from the right table ‘B’ and the matching rows from the left table ‘A’ in the join.
+- FULL OUTER JOIN - A FULL OUTER JOINS combines the effect of applying both left and right outer joins. The output of FULL OUTER JOIN contains all the rows from both Table ‘A’ and Table ‘B’.
+
+#### Database indexing
+A database index is a data structure that improves the speed of data retrieval operations on a database table at the cost of additional writes and the use of more storage space to maintain the extra copy of data. It enhances the speed of accessing the data by minimizing the disk access required each time when a query is processed.
+
+- Primary Index - In this type of indexing, the primary key of the database table is used to create the index. As the primary key contains unique values, it makes the searching very efficient and overall enhances the performance.
+- Clustered Index - The clustered index can be used in the case of the ordered data file. The index is created on the record which is not unique in the data file by grouping those which have similar characteristics. The index key points to every block in which data can be found related to that index value.
+- Secondary Index -The Secondary index can be used to access the data which are not stored in the ordered form in the data file. The secondary index can be created on attributes other than the primary key.
+
+#### B and B+ Tree
+B Tree is a self-balancing tree data structure. B-tree is used for implementing multilevel indexing. Every node of the B-tree stores the key-value along with the data pointer pointing to the block in the disk file containing that key.
+
+A B+ tree is similar to a B-tree, the only difference is that their leaves are linked at the bottom. Unlike B-tree, the nodes of the B+ tree do not store keys along with the pointers to the disk block. The internal nodes contain only keys and the leaf nodes contain the keys along with the data pointers. This property makes searching faster in B+ Tree.

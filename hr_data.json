@@ -1,0 +1,162 @@
+[
+  {
+    "id": "HR001",
+    "question": "Tell me about yourself."
+  },
+  {
+    "id": "HR002",
+    "question": "Why do you want this job?"
+  },
+  {
+    "id": "HR003",
+    "question": "What are your greatest strengths?"
+  },
+  {
+    "id": "HR004",
+    "question": "What are your weaknesses?"
+  },
+  {
+    "id": "HR005",
+    "question": "Why should we hire you?"
+  },
+  {
+    "id": "HR006",
+    "question": "Where do you see yourself in five years?"
+  },
+  {
+    "id": "HR007",
+    "question": "How do you handle stress and pressure?"
+  },
+  {
+    "id": "HR008",
+    "question": "What are your salary expectations?"
+  },
+  {
+    "id": "HR009",
+    "question": "Why did you leave your last job? (For experienced candidates)"
+  },
+  {
+    "id": "HR010",
+    "question": "How do you handle conflict in the workplace?"
+  },
+  {
+    "id": "HR011",
+    "question": "Describe a challenging situation you faced at work and how you handled it."
+  },
+  {
+    "id": "HR012",
+    "question": "What motivates you?"
+  },
+  {
+    "id": "HR013",
+    "question": "Are you willing to relocate or travel?"
+  },
+  {
+    "id": "HR014",
+    "question": "How do you prioritize your tasks?"
+  },
+  {
+    "id": "HR015",
+    "question": "Do you prefer working alone or in a team?"
+  },
+  {
+    "id": "HR016",
+    "question": "What do you know about our company?"
+  },
+  {
+    "id": "HR017",
+    "question": "How do you handle criticism?"
+  },
+  {
+    "id": "HR018",
+    "question": "What are your hobbies and interests outside of work?"
+  },
+  {
+    "id": "HR019",
+    "question": "What is your ideal work environment?"
+  },
+  {
+    "id": "HR020",
+    "question": "Do you have any questions for us?"
+  },
+  {
+    "id": "HR021",
+    "question": "What are your career goals?"
+  },
+  {
+    "id": "HR022",
+    "question": "How do you stay updated on industry trends?"
+  },
+  {
+    "id": "HR023",
+    "question": "Describe your ideal manager."
+  },
+  {
+    "id": "HR024",
+    "question": "What's your proudest professional accomplishment?"
+  },
+  {
+    "id": "HR025",
+    "question": "How do you handle failure or setbacks?"
+  },
+  {
+    "id": "HR026",
+    "question": "How do you define success?"
+  },
+  {
+    "id": "HR027",
+    "question": "What do you do when you disagree with your boss?"
+  },
+  {
+    "id": "HR028",
+    "question": "How do you manage your time effectively?"
+  },
+  {
+    "id": "HR029",
+    "question": "What software or tools are you proficient in?"
+  },
+  {
+    "id": "HR030",
+    "question": "Describe a time you had to learn something new quickly."
+  },
+  {
+    "id": "HR031",
+    "question": "How do you ensure accuracy in your work?"
+  },
+  {
+    "id": "HR032",
+    "question": "What kind of work environment do you thrive in?"
+  },
+  {
+    "id": "HR033",
+    "question": "How do you deal with a difficult co-worker or customer?"
+  },
+  {
+    "id": "HR034",
+    "question": "What's your approach to problem-solving?"
+  },
+  {
+    "id": "HR035",
+    "question": "Are you a leader or a follower?"
+  },
+  {
+    "id": "HR036",
+    "question": "How do you handle a situation where you have too many priorities?"
+  },
+  {
+    "id": "HR037",
+    "question": "What measures do you take to improve yourself professionally?"
+  },
+  {
+    "id": "HR038",
+    "question": "What was the biggest mistake you made in your last job and what did you learn from it?"
+  },
+  {
+    "id": "HR039",
+    "question": "What do you look for in a company culture?"
+  },
+  {
+    "id": "HR040",
+    "question": "Is there anything else you'd like us to know about you?"
+  }
+]
